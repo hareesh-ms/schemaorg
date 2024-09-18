@@ -9,7 +9,7 @@
     :isPartOf <https://pending.schema.org> ;
     :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
     rdfs:comment "Enumerates the different statuses of an Account Verification (Verified, NotVerified and Pending)." ;
-    rdfs:subClassOf :Enumeration .	
+    rdfs:subClassOf :Enumeration .
 
 :verificationStatus a rdf:Property ;
     rdfs:label "verificationStatus" ;
