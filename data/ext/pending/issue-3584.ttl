@@ -1,0 +1,55 @@
+@prefix : <https://schema.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:VerificationStatusEnumeration a rdfs:Class ;
+    rdfs:label "VerificationStatusEnumeration" ;
+    :isPartOf <https://pending.schema.org> ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment "Enumerates the different statuses of an Account Verification (Verified, NotVerified and Pending)." ;
+    rdfs:subClassOf :Enumeration .	
+
+:verificationStatus a rdf:Property ;
+    rdfs:label "verificationStatus" ;
+    :domainIncludes :Account ;
+    :isPartOf <https://pending.schema.org> ;
+    :rangeIncludes :VerificationStatusEnumeration ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment  "Status of verification." .
+
+:Verified a :VerificationStatusEnumeration ;
+    rdfs:label "Verified" ;
+    :isPartOf <https://pending.schema.org> ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment "The entity is Verified." .
+
+:NotVerified a :VerificationStatusEnumeration ;
+    rdfs:label "NotVerified" ;
+    :isPartOf <https://pending.schema.org> ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment "The entity is not Verified." .
+
+:VerificationPending a :VerificationStatusEnumeration ;
+    rdfs:label "VerificationPending" ;
+    :isPartOf <https://pending.schema.org> ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment "The entity verification is Pending." .
+
+verificationProof a rdf:Property ;
+    rdfs:label "verificationStatus" ;
+    :domainIncludes :Account ;
+    :isPartOf <https://pending.schema.org> ;
+    :rangeIncludes :AccountVerificationProof ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment  "A URL with the proof of verification done." .
+
+:profileAccount a rdf:Property ;
+    rdfs:label "verificationStatus" ;
+    :domainIncludes :ProfilePage ;
+    :isPartOf <https://pending.schema.org> ;
+    :rangeIncludes :Account ;
+    :source <https://github.com/schemaorg/schemaorg/issues/3584> ;
+    rdfs:comment  "Account associated with the profile." .
+
